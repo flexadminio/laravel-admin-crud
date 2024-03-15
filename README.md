@@ -10,6 +10,24 @@ https://www.flexadmin.io/downloads/laravel-flexadmin-free/
 
 https://www.flexadmin.io/documentation/installation/
 
+
+## Screenshots
+
+
+Product List | Multiple Upload  | Single Upload
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-screen1.png" width="400">|
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/upload-product.png" width="400">|
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/single-upload.png" width="400">|
+
+
+Manage Role | Update Role  | Login
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-auth.png" width="400">|
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/auth.png" width="400">|
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/login.png" width="400">|
+
+
 ## Run 
 
 ```
@@ -31,25 +49,27 @@ Laravel storage filesystem is so unique. Any file upload will be stored in the s
 
 ```
 php artisan storage:link
-
 ```
 
 This command will symlinked storage/app/public to public/storage
 
 
 ## UI
-npm run dev
 
+```
+npm run dev
+```
 
 ## Create new Adnin User
+
 ```
 php artisan admin:create
 ```
 
 ## Create new Model
+
 ```
 php artisan make:model SomeModel -c
-
 ```
 
 ## Create admin module
