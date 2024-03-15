@@ -1,6 +1,11 @@
 ## About FlexAdmin: Laravel 10, CRUD, Authentication, Admin Template
 https://www.flexadmin.io/documentation/introduction/
 
+
+## Free Download
+
+https://www.flexadmin.io/downloads/laravel-flexadmin-free/
+
 ## Installation
 
 https://www.flexadmin.io/documentation/installation/
