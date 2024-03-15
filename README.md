@@ -13,6 +13,10 @@ https://www.flexadmin.io/documentation/installation/
 
 ## Screenshots
 
+Dashboard | Add New Product  | Update record
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/dashboard.jpg" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/create-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/update-category.png" width="400">
+
 
 Product List | Multiple Upload  | Single Upload
 --- | --- |---
