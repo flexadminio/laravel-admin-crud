@@ -1,0 +1,25 @@
+@each $color,
+$value in $theme-colors {
+  .custom-radio-#{$color} {
+    span {
+      border: 1px solid $value;
+
+      &:after {
+        background-color: $value;
+      }
+    }
+  }
+
+  .custom-radio-solid-#{$color} {
+    span {
+      background: $value;
+      border-color: $value;
+    }
+
+    >input {
+      &:checked~span:after {
+        background-color: $white;
+      }
+    }
+  }
+}

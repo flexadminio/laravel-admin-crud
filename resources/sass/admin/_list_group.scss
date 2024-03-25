@@ -1,0 +1,10 @@
+.list-group {
+  --bs-list-group-color: #{$default-main-text};
+}
+
+body[data-theme-mode="dark-mode"]{
+
+  .list-group {
+    --bs-list-group-color: #{$dark-main-text};
+  }
+}

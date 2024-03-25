@@ -1,0 +1,149 @@
+/* ---------------------------------------------------
+    FORM STYLE form.scss
+----------------------------------------------------- */
+.form-group {
+  > label {
+    font-weight: 500;
+  }
+}
+.form-control,
+.form-select,
+.form-file-text,
+input {
+  background-color: var(--thirtary-background);
+  color: var(--secondary-text);
+  border-color: var(--input-border);
+
+  &:focus {
+    background-color: var(--thirtary-background);
+    color: var(--secondary-text);
+    border-color: var(--highlight);
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+}
+
+.form-select[multiple] {
+  height: auto;
+}
+
+.form-check-input {
+  background-color: var(--thirtary-background);
+}
+
+body[data-theme-mode="dark-mode"] {
+  .input-group-text {
+    background: #4c4f56;
+    border-color: var(--input-border);
+  }
+}
+
+.input-group.focus {
+  .input-group-text {
+    background-color: var(--highlight-400);
+    color: $gray-200;
+    border-color: var(--highlight);
+  }
+
+  .btn {
+    border-color: var(--highlight);
+  }
+}
+
+.page-content {
+  .input-group {
+    > .btn:not(:first-child) {
+        border-left: 1px solid #c2c0c0;
+    }
+  }
+}
+
+.form-login {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+#form-global-search {
+  min-width: 300px;
+
+  .input-group {
+    &.focus {
+      i {
+        color: var(--highlight);
+      }
+    }
+  }
+
+  .form-control {
+    height: $global-search-form-height;
+    padding-left: 1rem;
+    padding-right: 0;
+    box-shadow: none;
+    border-radius: $border-radius;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    height: $global-search-form-height;
+    border-radius: 0 $border-radius $border-radius 0;
+    padding-right: 1rem;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+  }
+}
+
+.ql-container {
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  background: #fefcfc;
+}
+
+.ql-bubble .ql-editor {
+  border: 1px solid #ccc;
+  border-radius: .5em;
+}
+
+.ql-snow.ql-toolbar {
+  display: block;
+  background: #eaecec;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow, .ql-bubble .ql-editor {
+  background-color: var(--thirtary-background);
+}
+
+@include media-breakpoint-down(lg) {
+  #form-global-search {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0px 0px 34px 0px rgba(12, 11, 11, 0.16);
+    // animation
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    margin-top: 15px;
+
+    &.show {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      margin-top: 0;
+    }
+    //end nanimation
+  }
+}

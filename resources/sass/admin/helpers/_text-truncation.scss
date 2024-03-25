@@ -1,0 +1,6 @@
+@each $text-truncate-size,
+$value in $text-truncate-sizes {
+  .text-truncate-#{$text-truncate-size} {
+    max-width: $value;
+  }
+}

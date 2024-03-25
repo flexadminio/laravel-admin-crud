@@ -1,0 +1,54 @@
+.user-avatar {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -2px;
+    background: $gray-400;
+    border: 2px solid $white;
+    border-radius: 50%;
+  }
+
+  .user-avatar-img {
+    background-size: cover;
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .user-avatar-text {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .user-avatar-#{$color} {
+    &::before {
+      content: " ";
+      background-color: $value;
+    }
+  }
+}
+
+@each $user-avatar-size,
+$value in $user-avatar-sizes {
+  .user-avatar-#{$user-avatar-size} {
+    .user-avatar-img {
+      width: #{$value};
+      height: #{$value};
+    }
+  }
+}
+
+@each $user-avatar-status-bottom,
+$value in $user-avatar-status-bottoms {
+  .user-avatar-#{$user-avatar-status-bottom}::before {
+    bottom: #{$value};
+  }
+}

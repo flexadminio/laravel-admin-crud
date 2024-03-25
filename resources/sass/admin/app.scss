@@ -1,0 +1,89 @@
+@use "sass:map";
+
+// Fonts
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900 !default";
+
+// Variables
+@import 'variables';
+
+@import "utilities";
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'select2';
+@import '~bootstrap-fileinput/scss/fileinput.scss';
+@import "../vendors/bootstrap-datepicker/bootstrap-datepicker.css";
+
+// font-awesome
+@import "../fonts/fontawesome/scss/fontawesome";
+@import "../fonts/fontawesome/scss/solid";
+@import "../fonts/fontawesome/scss/brands";
+@import "../fonts/fontawesome/scss/regular";
+@import "../fonts/fontawesome/scss/solid";
+@import "../fonts/fontawesome/scss/v4-shims";
+
+// Configuration
+@import "functions";
+
+@import "mixins";
+
+@import "colors";
+// Layout 
+@import "doc";
+@import "root";
+@import "right_sidebar";
+
+//Components
+@import "accordion";
+@import "avatar";
+@import "breadcrumb";
+@import "button";
+@import "calendar";
+@import "callout";
+@import "card";
+@import "chart";
+@import "chat";
+@import "checkbox";
+@import "cropper";
+@import "custom";
+
+@import "custom_select2";
+@import "custom_datepicker";
+@import "dropdown";
+@import "dual_listbox";
+@import "email";
+@import "footer";
+@import "footer";
+@import "forms";
+@import "gallery";
+@import "icon";
+@import "image";
+@import "jstree";
+@import "kanban_board";
+@import "left_sidebar";
+@import "list_group";
+@import "modal";
+@import "pagination";
+@import "positions";
+@import "print";
+@import "progress";
+@import "radio";
+@import "sweet_alert";
+@import "table";
+@import "tabs";
+@import "top_sidebar";
+@import "upload";
+@import "widget";
+@import "bulk_upload";
+// theme mode
+@import "theme_mode";
+
+//
+@import "custom_checkbox";
+@import "custom_radio";
+@import "highlight";
+// Helpers
+@import "helpers";
+
+@import "common";

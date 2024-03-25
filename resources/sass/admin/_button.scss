@@ -1,0 +1,196 @@
+//
+// Button Sizes
+//
+.btn {
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: .84rem 2.14rem;
+  font-size: .81rem;
+}
+
+button.btn:not([class*="btn-outline-"]) {
+  border: 0;
+}
+
+button.btn:not(.btn-rounded) {
+  border-radius: .125rem;
+}
+
+.btn.btn-lg {
+  padding: 1rem 2.4rem;
+  font-size: .94rem;
+}
+
+.btn.btn-sm, .btn.btn-icon  {
+  padding: .7rem 1rem;
+  font-size: .64rem;
+}
+
+//
+.button-list {
+  margin-bottom: 2rem;
+}
+
+.btn-rounded {
+  border-radius: 2rem;
+}
+
+.btn-shadow {
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+//
+// Button ripple, air (hover effect)
+//
+
+.btn-ripple {
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    transform: translate(0, -4px);
+  }
+}
+
+.btn-primary.btn-ripple,
+.btn-primary.btn-air {
+  box-shadow: 0px 4px 16px 0px rgba(93, 120, 255, 0.15);
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px rgba(93, 120, 255, 0.65);
+  }
+
+  ;
+}
+
+.btn-success.btn-ripple,
+.btn-success.btn-air {
+  box-shadow: 0px 4px 16px 0px rgba(40, 167, 69, 0.15);
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px rgba(40, 167, 69, 0.65);
+  }
+
+  ;
+}
+
+.btn-info.btn-ripple,
+.btn-info.btn-air {
+  box-shadow: 0px 4px 16px 0px rgba(29, 201, 183, 0.15);
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px rgba(29, 201, 183, 0.65);
+  }
+
+  ;
+}
+
+.btn-danger.btn-ripple,
+.btn-danger.btn-air {
+  box-shadow: 0px 4px 16px 0px rgba(253, 57, 122, 0.15);
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px rgba(253, 57, 122, 0.65);
+  }
+
+  ;
+}
+
+.btn-warning.btn-ripple,
+.btn-warning.btn-air {
+  box-shadow: 0px 4px 16px 0px rgba(255, 193, 7, 0.15);
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px rgba(255, 193, 7, 0.65);
+  }
+
+  ;
+}
+
+// label style
+
+[class*="btn-label-"] {
+  cursor: text;
+}
+
+.btn.btn-label-primary {
+  color: $primary;
+  @include background-opacity($primary, 0.2);
+}
+
+.btn.btn-label-secondary {
+  color: $secondary;
+  @include background-opacity($secondary, 0.2);
+}
+
+.btn.btn-label-info {
+  color: $info;
+  @include background-opacity($info, 0.2);
+}
+
+.btn.btn-label-dark {
+  color: $dark;
+  @include background-opacity($dark, 0.2);
+}
+
+.btn.btn-label-warning {
+  color: $warning;
+  @include background-opacity($warning, 0.2);
+}
+
+.btn.btn-label-success {
+  color: $success;
+  @include background-opacity($success, 0.2);
+}
+
+.btn.btn-label-danger {
+  color: $danger;
+  @include background-opacity($danger, 0.2);
+}
+
+.btn-facebook {
+  @include social-button($facebook-color);
+
+  &:hover {
+    @include social-button-hover($facebook-color);
+  }
+}
+
+.btn-twitter {
+  @include social-button($twitter-color);
+
+  &:hover {
+    @include social-button-hover($twitter-color);
+  }
+}
+
+.btn-google {
+  @include social-button($google-color);
+
+  &:hover {
+    @include social-button-hover($google-color);
+  }
+}
+
+
+.btn-instagram {
+  @include social-button($instagram-color);
+
+  &:hover {
+    @include social-button-hover($instagram-color);
+  }
+}
+
+.btn-linkedin {
+  @include social-button($linkedin-color);
+
+  &:hover {
+    @include social-button-hover($linkedin-color);
+  }
+}
+
+.btn.show {
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--highlight);
+  --bs-btn-active-border-color: var(--highlight);
+}

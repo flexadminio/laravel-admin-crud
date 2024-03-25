@@ -1,0 +1,281 @@
+/*-----------------------
+ ------ Variables ------
+-------------------------*/
+
+//
+// bootstrap variables
+//
+$input-btn-focus-width: 0;
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+// fusv-disable
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+// fusv-enable
+$blue:    #0d6efd;
+$indigo:  #7976b3;
+$purple:  #886ab5;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffb300;
+$green:   #7cb342;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+$rose:    #d81b60;
+$success-dark: #508c0e;
+$rose-dark: #a00037;
+$yellow-dark:  #ce8d0a;
+
+//
+// scss-docs-start colors-map
+$colors: (
+  "blue":            $blue,
+  "indigo":          $indigo,
+  "purple":          $purple,
+  "pink":            $pink,
+  "red":             $red,
+  "orange":          $orange,
+  "yellow":          $yellow,
+  "green":           $green,
+  "teal":            $teal,
+  "cyan":            $cyan,
+  "white":           $white,
+  "gray":            $gray-600,
+  "gray-dark":       $gray-800,
+  "rose":            $rose,
+  "success-dark":    $success-dark,
+  "rose-dark":       $rose-dark,
+  "yellow-dark":     $yellow-dark
+);
+// scss-docs-end colors-map
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: (
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark,
+  "purple":       $purple,
+  "gray-200":     $gray-200,
+  "rose":         $rose,
+  "rose-dark":    $rose-dark,
+  "warning-dark": $yellow-dark,
+  "success-dark": $success-dark
+);
+
+$border-radius:               .25rem;
+$border-radius-sm:            .2rem;
+$border-radius-lg:            .4rem;
+
+$link-decoration: none;
+
+//card
+$card-cap-padding-y: 0.8rem;
+$card-border-radius: .45rem;
+
+//extend button size
+
+$btn-padding-y-xl:            0.9rem;
+$btn-padding-x-xl:            2rem;
+$btn-font-size-xl:            1rem;
+$btn-border-radius-xl:        $border-radius-lg;
+
+$breadcrumb-bg: transparent;
+
+// $nav-tabs-link-active-border-color: $white;
+// $nav-tabs-border-color:             $white;
+
+
+//
+// custome variables
+//
+$font-size-base: 1rem;
+
+$font-size-xs: $font-size-base * 0.7;
+$font-size-sm: $font-size-base * 0.9;
+$font-size-md: $font-size-base * 1.2;
+$font-size-lg: $font-size-base * 1.6;
+$font-size-xl: $font-size-base * 2.5;
+$font-size-xxl: $font-size-base * 3;
+
+$h1-font-size:                $font-size-xxl;
+$h2-font-size:                $font-size-xl;
+$h3-font-size:                $font-size-lg;
+$h4-font-size:                $font-size-md;
+$h5-font-size:                $font-size-sm;
+$h6-font-size:                $font-size-xs;
+
+$theme-font-sizes: (
+  xs: $font-size-xs,
+  sm: $font-size-sm,
+  md: $font-size-md,
+  base: $font-size-base,
+  lg: $font-size-lg,
+  xl: $font-size-xl,
+  xxl: $font-size-xxl
+);
+
+$theme-font-weights: (
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "900": 900
+); 
+
+$text-truncate-sizes: (
+  xs: 10rem,
+  sm: 20rem,
+  md: 30rem,
+  lg: 40rem,
+  xl: 50rem,
+  xxl: 60rem
+);
+
+$user-avatar-sizes: (
+  xxs: 2.5rem,
+  xs: 3rem,
+  sm: 5rem,
+  md: 7rem,
+  lg: 9rem,
+  xl: 11rem,
+  xxl: 15rem
+);
+
+$user-avatar-status-bottoms: (
+  xs: -2px,
+  sm: 4px,
+  md: 12px,
+  lg: 24px,
+  xl: 34px,
+  xxl: 58px
+);
+
+//general
+$fa-font-path: "../fonts/fontawesome/webfonts";
+$main-background-color: #f0f2f5;
+
+//left sidebar
+$left-sidebar-width: 250px;
+$left-sidebar-shrinking-width: 80px;
+$left-sidebar-color: #ccc;
+$left-sidebar-z-index: 1051;
+$left-sidebar-active-color: $white;
+$left-sidebar-background: #364150;
+$left-sidebar-item-expand-bg: #1d2d3a;
+
+//top sidebar
+$topbar-height: 70px;
+
+$footer-min-height: 70px;
+
+$dropdown-menu-lg-min-width: 22rem;
+
+$table-group-seperator-color: #aeb1b3;
+$table-hover-bg: #eff2fb;
+
+$global-search-form-height: 38px;
+
+//social color
+$behance-color: #053eff;
+$behance-color-hover: #062fbb;
+$dribbble-color: #ec5f94;
+$dribbble-color-hover: #b4446e;
+$facebook-color: #3864c3;
+$google-color: #e84a3c;
+$instagram-color: #517fa4;
+$linkedin-color: #0386cb;
+$pinterest-color: #d2373b;
+$reddit-color: #ff4500;
+$reddit-color-hover: #c13400;
+$twitter-color: #65b5f2;
+
+// BEGIN theme_settings
+$anchor: #5b5b5b;
+$maroon: #981b1b;
+$carrot: #bf662c;
+$lollipop: #8d2556;
+$gold: #b98500;
+$forest: #23a48f;
+$hoki: #447574;
+$facebook: #3b5998;
+$purple: #886ab5;
+$indigo: #00AAD0;
+$cafe: #31271e;
+$charcoal: #364150;
+
+$theme-highlight-colors: (
+  "highlight":          var(--highlight),
+  "highlight-100":      var(--highlight-100),
+);
+
+// default mode colors
+$default-contrast-background: #18191a;
+$default-contrast-box-shadow: opacify(#18191a, 0.15);
+$default-divider: #eaeaea;
+$default-highlight: $anchor;
+$default-hover-overlay: rgba(0, 0, 0, 0.1);
+$default-input-border: $gray-400;
+$default-main-text: #4d4b4b;
+$default-nav-bar-background: #242526;
+$default-nav-bar-highlight-background: #8b8989;
+$default-primary-icon: #050505;
+$default-secondary-text: #495057;
+$default-thirtary-text: #6c757d;
+$default-secondary-bar-background: $white;
+$default-secondary-button-background: #e4e6eb;
+$default-surface-background: $white;
+$default-thirtary-background: #f2f4f6;
+$default-wash: #e4e6eb;
+$default-web-wash: $main-background-color;
+
+//dark mode colors
+$dark-contrast-background: $main-background-color;
+$dark-contrast-box-shadow: opacify($main-background-color, 0.15);
+$dark-divider: #3e4042;
+$dark-highlight: $anchor;
+$dark-hover-overlay: rgba(255, 255, 255, 0.1);
+$dark-input-border: #414242;
+$dark-main-text: #e4e6eb;
+$dark-nav-bar-background: #242526;
+$dark-nav-bar-highlight-background: #3a3b3c;
+$dark-primary-icon: #e4e6eb;
+$dark-secondary-text: #b0b3b8;
+$dark-secondary-bar-background: #242526;
+$dark-secondary-button-background: rgba(255, 255, 255, 0.1);
+$dark-surface-background: #242526;
+$dark-thirtary-background: #3a3b3c;
+$dark-wash: #3e4042;
+$dark-web-wash: #18191a;
+// END theme_settings

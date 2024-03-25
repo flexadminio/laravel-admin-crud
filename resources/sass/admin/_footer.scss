@@ -1,0 +1,39 @@
+/* ---------------------------------------------------
+    F00TER STYLE footer.scss
+----------------------------------------------------- */
+
+#footer {
+  min-height: $footer-min-height;
+  border-top: 1px solid var(--divider);
+  padding: 0 2rem;
+  .footer-nav-item {
+    margin-right: 1.25rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body[data-theme-footer-fixed="true"] {
+    .page-content {
+      margin-bottom: $topbar-height;
+    }
+
+    #footer {
+      left: 0;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      background-color: var(--web-wash);
+      z-index: 50;
+    }
+
+    #footer {
+      margin-left: $left-sidebar-width;
+    }
+
+    &[data-theme-sidebar-shrinked="true"] {
+      #footer {
+        margin-left: $left-sidebar-shrinking-width;
+      }
+    }
+  }
+}

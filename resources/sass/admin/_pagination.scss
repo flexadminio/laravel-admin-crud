@@ -1,0 +1,10 @@
+.page-item.disabled .page-link, .page-link {
+  background-color: var(--surface-background);
+  color: var(--contrast-background);
+}
+
+.page-item.active .page-link, .page-link:hover {
+  background-color: var(--wash);
+  border-color: #dee2e6;
+  color: var(--contrast-background);
+}

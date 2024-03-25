@@ -1,0 +1,6 @@
+@each $font-weight,
+$value in $theme-font-weights {
+  .fw-#{$font-weight} {
+    font-weight: $value;
+  }
+}

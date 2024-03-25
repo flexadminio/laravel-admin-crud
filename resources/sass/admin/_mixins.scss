@@ -1,0 +1,102 @@
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin social-button($social-color) {
+  background-color: $social-color;
+  border-color: $social-color;
+  color: #fff !important;
+}
+
+@mixin social-button-hover($social-color) {
+  background-color: shade-color($social-color, 20%);
+  border-color: shade-color($social-color, 20%);
+}
+
+@mixin transform($variable) {
+  -ms-transform: $variable;
+  -webkit-transform: $variable;
+  transform: $variable;
+}
+
+@mixin transition($vari, $times) {
+  -webkit-transition: $vari $times;
+  -o-transition: $vari $times;
+  transition: $vari $times;
+}
+
+@mixin backgroundSize($size) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $size;
+}
+
+@mixin positionFull() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin positionAll($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin positionCenterMiddle() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin positionLeftMiddle() {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin positionRightMiddle() {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin positionOverLeftMiddle($m_right) {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: $m_right;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin positionOverRightMiddle($m_left) {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: $m_left;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

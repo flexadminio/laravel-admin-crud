@@ -1,0 +1,25 @@
+.icon-sm {
+  display: inline-block;
+  height: 2.25rem;
+  width: 2.25rem;
+
+  i {
+    color: #fff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.primary-icon {
+  background-color: var(--secondary-button-background);
+  color: var(--primary-icon);
+}
+
+.icon-md {
+  display: inline-block;
+  height: 4.25rem;
+  width: 4.25rem;
+}
+

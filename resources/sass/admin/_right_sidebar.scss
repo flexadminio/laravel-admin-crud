@@ -1,0 +1,64 @@
+// Style for theme config (app-settings)
+
+// Theme Color
+.theme-colors>ul>li {
+  display: inline-block;
+
+  a.active {
+    &::before {
+      display: flex;
+      font-family: 'Font Awesome 5 Pro';
+      content: "\f00c";
+      font-size: 1.2rem;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+    }
+  }
+}
+
+.theme-colors > ul > li [data-theme-color] {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.bg-black {
+  background: $charcoal !important;
+}
+
+// End Theme Color
+
+// Theme Mode
+.theme-mode-config {
+  position: relative;
+
+  &.active {
+    &::before {
+      display: flex;
+      font-family: 'Font Awesome 5 Pro';
+      content: "\f058";
+      font-size: 3rem;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding-left: .75rem;
+      padding-top: .25rem;
+    }
+  }
+
+  .map-left-sidebar {
+    background: var(--highlight);
+  }
+}
+
+// End Theme Mode

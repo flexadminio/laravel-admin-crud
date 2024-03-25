@@ -1,0 +1,131 @@
+/* ---------------------------------------------------
+    TOP SIDEBAR STYLE _top_sidebar.scss
+----------------------------------------------------- */
+body[data-theme-mode="dark-mode"] {
+  .top-right-menu {
+    .nav-item {
+      i {
+        color: var(--highlight);
+      }
+      &:hover {
+        i {
+          color: var(--contrast-background);
+        }
+        
+      }
+    }
+
+  }
+}
+
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-cafe"],
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-charcoal"] {
+  .top-right-menu {
+    .nav-item {
+      i {
+        color: var(--contrast-background);
+      }
+    }
+  }
+}
+
+.topbar {
+  height: $topbar-height;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 2rem;
+  box-shadow: 0px 0px 34px 0px rgba(150, 166, 170, 0.16);
+  border-bottom: 1px solid var(--divider);
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  i {
+    font-size: 1.3rem;
+  }
+}
+
+.nav-item>a .badge {
+  position: absolute;
+  padding: 2px;
+  font-size: 10px;
+  right: 10px;
+  top: -8px;
+  min-width: 17px;
+  line-height: 12px;
+}
+
+.top-right-menu {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 0;
+
+  .nav-item {
+    i {
+      color: var(--highlight);
+    }
+  }
+}
+
+.user-setting-list {
+  background: var(--surface-background);
+  padding: 0 1rem;
+  margin: 0 1rem;
+
+  .profile-dropdown {
+    .dropdown-item {
+      padding: 0.5rem 2rem;
+    }
+  }
+
+  .nav-profile img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body[data-theme-header-fixed="true"] {
+    .page-content {
+      margin-top: $topbar-height;
+    }
+
+    .topbar {
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      background-color: var(--web-wash);
+      z-index: 50;
+    }
+
+    .topbar {
+      margin-left: $left-sidebar-width;
+    }
+
+    &[data-theme-sidebar-shrinked="true"] {
+      .topbar {
+        margin-left: $left-sidebar-shrinking-width;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .topbar-dropdown {
+    position: static;
+  }
+
+  .dropdown-menu-right {
+    right: 1rem;
+    left: 1rem;
+  }
+}

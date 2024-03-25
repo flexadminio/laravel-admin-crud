@@ -1,0 +1,22 @@
+@media print {
+  #left-sidebar, #footer, .topbar, .breadcrumb, .header-title {
+    display: none !important;
+  }
+  .card-body, .page-content, body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  .invoice-col {
+    width: 45%;
+    float: left;
+  }
+
+  table.d-print-no-border {
+    tr {
+      border-color: #fff !important;
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+body[data-theme-mode="dark-mode"] {
+  .bg-faded {
+    background-color: #3c3f48;
+    color: #a5abb1;
+  }
+}
+
+body:not([data-theme-mode="dark-mode"]) {
+  .bg-trans-gradient {
+    background: linear-gradient(to left, var(--highlight) 0%, #3f93d6 100%)!important;
+  }
+}
+
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-cafe"],
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-charcoal"] {
+  .breadcrumb a, table a, .text-highlight  {
+    color: var(--contrast-background);
+  }
+}

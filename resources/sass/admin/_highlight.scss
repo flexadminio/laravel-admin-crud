@@ -1,0 +1,56 @@
+@each $color,
+$value in $theme-highlight-colors {
+  .bd-callout-#{$color} {
+    border-color: $value;
+  }
+
+  .bg-#{$color} {
+    background-color: $value;
+  }
+
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+
+  .btn-#{$color} {
+    background-color: $value;
+    color: $white;
+
+    &:hover {
+      background-color: var(--highlight-600);
+      color: $white;
+    }
+  }
+
+  .btn-outline-#{$color} {
+    color: $value;
+    border-color: $value;
+
+    &:hover {
+      color: $white;
+      background-color: $value;
+      border-color: $value;
+    }
+  }
+
+  .color-#{$color} {
+    color: $value;
+  }
+
+  .custom-switcher-#{$color} label:before {
+    border-color: $value;
+  }
+
+  .custom-switcher-#{$color} input:checked+label:before {
+    background-color: $value;
+    border-color: $value;
+  }
+}
+
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-cafe"],
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-charcoal"] {
+  [class^="btn-outline-"], [class*=" btn-outline-"] {
+    color: $white;
+    border-color: $white;
+  }
+}

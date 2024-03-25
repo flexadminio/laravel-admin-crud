@@ -1,0 +1,395 @@
+$anchor-100: rgba($anchor, .2);
+$anchor-200: rgba($anchor, .4);
+$anchor-300: rgba($anchor, .6);
+$anchor-400: rgba($anchor, .8);
+$anchor-500: $anchor;
+$anchor-600: shade-color($anchor, 20%);
+$anchor-700: shade-color($anchor, 40%);
+$anchor-800: shade-color($anchor, 60%);
+$anchor-900: shade-color($anchor, 80%);
+
+$anchors: ("100": $anchor-100,
+"200": $anchor-200,
+"300": $anchor-300,
+"400": $anchor-400,
+"500": $anchor-500,
+"600": $anchor-600,
+"700": $anchor-700,
+"800": $anchor-800,
+"900": $anchor-900);
+
+@each $color,
+$value in $anchors {
+  .bg-anchor-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-anchor-#{$color} {
+    color: #{$value};
+  }
+}
+
+$maroon-100: rgba($maroon, .2);
+$maroon-200: rgba($maroon, .4);
+$maroon-300: rgba($maroon, .6);
+$maroon-400: rgba($maroon, .8);
+$maroon-500: $maroon;
+$maroon-600: shade-color($maroon, 20%);
+$maroon-700: shade-color($maroon, 40%);
+$maroon-800: shade-color($maroon, 60%);
+$maroon-900: shade-color($maroon, 80%);
+
+$maroons: ("100": $maroon-100,
+"200": $maroon-200,
+"300": $maroon-300,
+"400": $maroon-400,
+"500": $maroon-500,
+"600": $maroon-600,
+"700": $maroon-700,
+"800": $maroon-800,
+"900": $maroon-900);
+
+@each $color,
+$value in $maroons {
+  .bg-maroon-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-maroon-#{$color} {
+    color: #{$value};
+  }
+}
+
+$carrot-100: rgba($carrot, .2);
+$carrot-200: rgba($carrot, .4);
+$carrot-300: rgba($carrot, .6);
+$carrot-400: rgba($carrot, .8);
+$carrot-500: $carrot;
+$carrot-600: shade-color($carrot, 20%);
+$carrot-700: shade-color($carrot, 40%);
+$carrot-800: shade-color($carrot, 60%);
+$carrot-900: shade-color($carrot, 80%);
+
+$carrots: ("100": $carrot-100,
+"200": $carrot-200,
+"300": $carrot-300,
+"400": $carrot-400,
+"500": $carrot-500,
+"600": $carrot-600,
+"700": $carrot-700,
+"800": $carrot-800,
+"900": $carrot-900);
+
+@each $color,
+$value in $carrots {
+  .bg-carrot-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-carrot-#{$color} {
+    color: #{$value};
+  }
+}
+
+$lollipop-100: rgba($lollipop, .2);
+$lollipop-200: rgba($lollipop, .4);
+$lollipop-300: rgba($lollipop, .6);
+$lollipop-400: rgba($lollipop, .8);
+$lollipop-500: $lollipop;
+$lollipop-600: shade-color($lollipop, 20%);
+$lollipop-700: shade-color($lollipop, 40%);
+$lollipop-800: shade-color($lollipop, 60%);
+$lollipop-900: shade-color($lollipop, 80%);
+
+$lollipops: ("100": $lollipop-100,
+"200": $lollipop-200,
+"300": $lollipop-300,
+"400": $lollipop-400,
+"500": $lollipop-500,
+"600": $lollipop-600,
+"700": $lollipop-700,
+"800": $lollipop-800,
+"900": $lollipop-900);
+
+@each $color,
+$value in $lollipops {
+  .bg-lollipop-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-lollipop-#{$color} {
+    color: #{$value};
+  }
+}
+
+$gold-100: rgba($gold, .2);
+$gold-200: rgba($gold, .4);
+$gold-300: rgba($gold, .6);
+$gold-400: rgba($gold, .8);
+$gold-500: $gold;
+$gold-600: shade-color($gold, 20%);
+$gold-700: shade-color($gold, 40%);
+$gold-800: shade-color($gold, 60%);
+$gold-900: shade-color($gold, 80%);
+
+$golds: ("100": $gold-100,
+"200": $gold-200,
+"300": $gold-300,
+"400": $gold-400,
+"500": $gold-500,
+"600": $gold-600,
+"700": $gold-700,
+"800": $gold-800,
+"900": $gold-900);
+
+@each $color,
+$value in $golds {
+  .bg-gold-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-gold-#{$color} {
+    color: #{$value};
+  }
+}
+
+$forest-100: rgba($forest, .2);
+$forest-200: rgba($forest, .4);
+$forest-300: rgba($forest, .6);
+$forest-400: rgba($forest, .8);
+$forest-500: $forest;
+$forest-600: shade-color($forest, 20%);
+$forest-700: shade-color($forest, 40%);
+$forest-800: shade-color($forest, 60%);
+$forest-900: shade-color($forest, 80%);
+
+$forests: ("100": $forest-100,
+"200": $forest-200,
+"300": $forest-300,
+"400": $forest-400,
+"500": $forest-500,
+"600": $forest-600,
+"700": $forest-700,
+"800": $forest-800,
+"900": $forest-900);
+
+@each $color,
+$value in $forests {
+  .bg-forest-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-forest-#{$color} {
+    color: #{$value};
+  }
+}
+
+
+$hoki-100: rgba($hoki, .2);
+$hoki-200: rgba($hoki, .4);
+$hoki-300: rgba($hoki, .6);
+$hoki-400: rgba($hoki, .8);
+$hoki-500: $hoki;
+$hoki-600: shade-color($hoki, 20%);
+$hoki-700: shade-color($hoki, 40%);
+$hoki-800: shade-color($hoki, 60%);
+$hoki-900: shade-color($hoki, 80%);
+
+$hokis: ("100": $hoki-100,
+"200": $hoki-200,
+"300": $hoki-300,
+"400": $hoki-400,
+"500": $hoki-500,
+"600": $hoki-600,
+"700": $hoki-700,
+"800": $hoki-800,
+"900": $hoki-900);
+
+@each $color,
+$value in $hokis {
+  .bg-hoki-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-hoki-#{$color} {
+    color: #{$value};
+  }
+}
+
+$facebook-100: rgba($facebook, .2);
+$facebook-200: rgba($facebook, .4);
+$facebook-300: rgba($facebook, .6);
+$facebook-400: rgba($facebook, .8);
+$facebook-500: $facebook;
+$facebook-600: shade-color($facebook, 20%);
+$facebook-700: shade-color($facebook, 40%);
+$facebook-800: shade-color($facebook, 60%);
+$facebook-900: shade-color($facebook, 80%);
+
+$facebooks: ("100": $facebook-100,
+"200": $facebook-200,
+"300": $facebook-300,
+"400": $facebook-400,
+"500": $facebook-500,
+"600": $facebook-600,
+"700": $facebook-700,
+"800": $facebook-800,
+"900": $facebook-900);
+
+@each $color,
+$value in $facebooks {
+  .bg-facebook-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-facebook-#{$color} {
+    color: #{$value};
+  }
+}
+
+$purple-100: rgba($purple, .2);
+$purple-200: rgba($purple, .4);
+$purple-300: rgba($purple, .6);
+$purple-400: rgba($purple, .8);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 20%);
+$purple-700: shade-color($purple, 40%);
+$purple-800: shade-color($purple, 60%);
+$purple-900: shade-color($purple, 80%);
+$purples: ("100": $purple-100,
+"200": $purple-200,
+"300": $purple-300,
+"400": $purple-400,
+"500": $purple-500,
+"600": $purple-600,
+"700": $purple-700,
+"800": $purple-800,
+"900": $purple-900);
+
+@each $color,
+$value in $purples {
+  .bg-purple-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-purple-#{$color} {
+    color: #{$value};
+  }
+}
+
+
+$indigo-100: rgba($indigo, .2);
+$indigo-200: rgba($indigo, .4);
+$indigo-300: rgba($indigo, .6);
+$indigo-400: rgba($indigo, .8);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+
+$indigos: ("100": $indigo-100,
+"200": $indigo-200,
+"300": $indigo-300,
+"400": $indigo-400,
+"500": $indigo-500,
+"600": $indigo-600,
+"700": $indigo-700,
+"800": $indigo-800,
+"900": $indigo-900);
+
+@each $color,
+$value in $indigos {
+  .bg-indigo-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-indigo-#{$color} {
+    color: #{$value};
+  }
+}
+
+$cafe-100: rgba($cafe, .2);
+$cafe-200: rgba($cafe, .4);
+$cafe-300: rgba($cafe, .6);
+$cafe-400: rgba($cafe, .8);
+$cafe-500: $cafe;
+$cafe-600: shade-color($cafe, 20%);
+$cafe-700: shade-color($cafe, 40%);
+$cafe-800: shade-color($cafe, 60%);
+$cafe-900: shade-color($cafe, 80%);
+$cafes: ("100": $cafe-100,
+"200": $cafe-200,
+"300": $cafe-300,
+"400": $cafe-400,
+"500": $cafe-500,
+"600": $cafe-600,
+"700": $cafe-700,
+"800": $cafe-800,
+"900": $cafe-900);
+
+@each $color,
+$value in $cafes {
+  .bg-cafe-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-cafe-#{$color} {
+    color: #{$value};
+  }
+}
+
+$charcoal-100: rgba($charcoal, .2);
+$charcoal-200: rgba($charcoal, .4);
+$charcoal-300: rgba($charcoal, .6);
+$charcoal-400: rgba($charcoal, .8);
+$charcoal-500: $charcoal;
+$charcoal-600: shade-color($charcoal, 20%);
+$charcoal-700: shade-color($charcoal, 40%);
+$charcoal-800: shade-color($charcoal, 60%);
+$charcoal-900: shade-color($charcoal, 80%);
+
+$charcoals: ("100": $charcoal-100,
+"200": $charcoal-200,
+"300": $charcoal-300,
+"400": $charcoal-400,
+"500": $charcoal-500,
+"600": $charcoal-600,
+"700": $charcoal-700,
+"800": $charcoal-800,
+"900": $charcoal-900);
+
+@each $color,
+$value in $charcoals {
+  .bg-charcoal-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-charcoal-#{$color} {
+    color: #{$value};
+  }
+}
+
+$extend-colors: ("anchor": $anchor,
+"maroon": $maroon,
+"carrot": $carrot,
+"lollipop": $lollipop,
+"gold": $gold,
+"forest": $forest,
+"hoki": $hoki,
+"facebook": $facebook,
+"purple": $purple,
+"indigo": $indigo,
+"cafe": $cafe,
+"charcoal": $charcoal);
+
+@each $color,
+$value in $extend-colors {
+  .bg-#{$color} {
+    background-color: #{$value};
+  }
+
+  .text-#{$color} {
+    color: #{$value};
+  }
+}

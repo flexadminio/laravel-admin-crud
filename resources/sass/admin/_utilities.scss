@@ -1,0 +1,48 @@
+$utilities: () !default;
+
+$utilities: map-merge(
+  (
+    "rounded-top-left": (
+      property: border-top-left-radius,
+      class: rounded-top-left,
+      values: (null: $border-radius)
+    ),
+    "rounded-top-right": (
+      property: border-top-right-radius,
+      class: rounded-top-right,
+      values: (null: $border-radius)
+    ),
+    "rounded-bottom-left": (
+      property: border-bottom-left-radius,
+      class: rounded-bottom-left,
+      values: (null: $border-radius)
+    ),
+    "rounded-bottom-right": (
+      property: border-bottom-right-radius,
+      class: rounded-bottom-right,
+      values: (null: $border-radius)
+    ),
+    "border-top-left-radius-0": (
+      property: border-top-left-radius,
+      class: border-top-left-radius-0,
+      values: (null: 0)
+    ),
+    "border-top-right-radius-0": (
+      property: border-top-right-radius,
+      class: border-top-right-radius-0,
+      values: (null: 0)
+    ),
+    "border-bottom-left-radius-0": (
+      property: border-bottom-left-radius,
+      class: border-bottom-left-radius-0,
+      values: (null: 0)
+    ),
+    "border-bottom-right-radius-0": (
+      property: border-bottom-right-radius,
+      class: border-bottom-right-radius-0,
+      values: (null: 0)
+    )
+  ),
+  $utilities
+);
+

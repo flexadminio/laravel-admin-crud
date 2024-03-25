@@ -1,0 +1,40 @@
+body[data-theme-mode="dark-mode"]{
+  .swal2-popup {
+    background-color: var(--thirtary-background);
+  }
+  .swal2-title, .swal2-html-container {
+    color: $white;
+  }
+}
+
+.swal2-popup {
+  .swal2-styled {
+    &.swal2-confirm {
+      background-color: var(--highlight);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: var(--highlight-800);
+    }
+  }
+
+  .swal2-title {
+    font-size: 1.32rem;
+  }
+
+  .swal2-content {
+    color: var(--main-text);
+  }
+
+  .swal2-icon-content {
+    font-size: 2.6rem;
+  }
+
+  .swal2-actions {
+    button:focus {
+      box-shadow: none;
+    }
+  }
+}
