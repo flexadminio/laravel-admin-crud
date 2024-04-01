@@ -1,6 +1,8 @@
 ## About FlexAdmin
 
-- ![#E36F05] `Please give me a star. I appreciate about that. Thank you so much!`
+```diff
+! Please give me a star. I appreciate about that. Thank you so much!
+```
 
 ## Requirement:
 - PHP version >= 8.2
