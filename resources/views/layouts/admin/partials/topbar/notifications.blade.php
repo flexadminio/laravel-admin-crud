@@ -1,6 +1,6 @@
 <li class="nav-item topbar-dropdown me-4">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" id="emailsDropdown">
-    <i class="fa fa-envelope fs-3"></i>
+    <i class="fa-regular fa-envelope fs-3"></i>
     <span class="badge bg-success rounded-circle">6</span>
     </a>
     <div class="dropdown-menu dropdown-animate dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="emailsDropdown">
@@ -11,7 +11,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('avatar.png') }}" class="user-avatar rounded-circle" alt="User">
+              <img src="{{ Vite::asset('resources/images/avatar.png') }}" class="user-avatar rounded-circle" alt="User">
             </div>
             <div class="col-10">
               <div>Sam Robert</div>
@@ -23,7 +23,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
+              <img src="{{ Vite::asset('resources/images/default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
             </div>
             <div class="col-10">
               <div>Schirsten Vander</div>
@@ -35,7 +35,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
+              <img src="{{ Vite::asset('resources/images/default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
             </div>
             <div class="col-10">
               <div>Robert Nordic</div>
@@ -47,7 +47,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
+              <img src="{{ Vite::asset('resources/images/default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
             </div>
             <div class="col-10">
               <div>Michael Branson</div>
@@ -59,7 +59,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
+              <img src="{{ Vite::asset('resources/images/default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
             </div>
             <div class="col-10">
               <div>Antonym Sladers</div>
@@ -71,7 +71,7 @@
         <a href="#" class="list-group-item">
           <div class="row no-gutters align-items-center">
             <div class="col-2">
-              <img src="{{ Vite::image('default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
+              <img src="{{ Vite::asset('resources/images/default-female-avatar.jpg') }}" alt="User" class="user-avatar rounded-circle">
             </div>
             <div class="col-10">
               <div>Marcus</div>
@@ -88,7 +88,7 @@
   </li>
   <li class="nav-item task-list topbar-dropdown me-4">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" id="tasksDropdown">
-    <i class="fa fa-tasks fs-3"></i>
+    <i class="fa-solid fa-list-check fs-3"></i>
     <span class="badge bg-danger rounded-circle">5</span>
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0 dropdown-animate" aria-labelledby="tasksDropdown">
@@ -159,7 +159,7 @@
   </li>
   <li class="nav-item notification-list topbar-dropdown me-4">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" id="notificationsDropdown">
-    <i class="fa fa-bell fs-3"></i>
+    <i class="fa-regular fa-bell fs-3"></i>
     <span class="badge bg-info rounded-circle">4</span>
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0 dropdown-animate" aria-labelledby="notificationsDropdown">
@@ -182,7 +182,7 @@
         <a href="#" class="list-group-item">
           <div class="row align-items-center">
             <div class="col-2">
-              <i class="ms-1 text-warning fas fa-fw fa-bell"></i>
+              <i class="ms-1 text-warning fa-regular fa-bell"></i>
             </div>
             <div class="col-10">
               <div>Update completed</div>

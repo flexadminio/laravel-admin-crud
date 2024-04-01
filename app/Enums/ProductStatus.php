@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Enums;
 
@@ -12,6 +14,8 @@ use BenSampo\Enum\Enum;
 final class ProductStatus extends Enum
 {
     const Active = 1;
+
     const Pending = 2;
+
     const Inactive = 3;
 }

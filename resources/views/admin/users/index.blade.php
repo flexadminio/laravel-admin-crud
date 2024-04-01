@@ -3,10 +3,12 @@
 
     <x-admin.index-toolbar>
         <x-slot:mainactions>
+            @can('user-create')
             <a class="btn btn-highlight waves-effect" data-modal="true" href="{{ route('users.create') }}">
                 <i class="fa fa-plus-circle"></i>
                 <span class="d-none d-md-inline">{{ _('Create New User') }}</span>
             </a>
+            @endcan
          </x-slot>
     </x-admin.index-toolbar>
 
@@ -42,11 +44,26 @@
                                         </td>
                                         <td>
                                             <ul class="list-unstyled table-actions">
-
-                                                <li><a href="{{ route('users.edit', $user->id) }}" data-modal="true" ><i class="fa fa-pen"
+                                                @can('user-edit')
+                                                <li>
+                                                    <a href="{{ route('users.edit', $user->id) }}" data-modal="true" ><i class="fa fa-pen"
                                                             data-bs-original-title="Edit"
-                                                            data-bs-toggle="tooltip"></i></a></li>
-
+                                                            data-bs-toggle="tooltip"></i>
+                                                    </a>
+                                                </li>
+                                                @endcan
+                                                @can('user-delete')
+                                                <li>
+                                                    <a href="javascript:void(0);"
+                                                        data-url="{{ route('users.destroy', $user->id) }}"
+                                                        class="flexadmin-ajax-delete-btn text-danger"
+                                                        data-method="delete"
+                                                        data-confirm="Are you sure you want to delete this user?">
+                                                        <i class="fa fa-trash" data-bs-original-title="Archive"
+                                                            data-bs-toggle="tooltip"></i>
+                                                    </a>
+                                                </li>
+                                                @endcan
                                             </ul>
                                         </td>
                                     </tr>
@@ -58,5 +75,5 @@
             </div>
         </div>
     </div>
-    {!! $users->links() !!}
+    {!! $users->links('pagination::bootstrap-5') !!}
 </x-admin.app-layout>

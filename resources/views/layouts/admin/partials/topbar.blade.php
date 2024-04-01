@@ -7,7 +7,7 @@
         @include('layouts.admin.partials.topbar.user-menu')
         <li class="nav-item me-4">
           <a href="#app-settings" class="nav-link" data-bs-toggle="modal"  id="modalSetting">
-          <i class="fa fa-cog rotate"></i>
+          <i class="fa-solid fa-gear rotate"></i>
           </a>
         </li>
     </ul>

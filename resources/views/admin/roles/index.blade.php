@@ -3,10 +3,12 @@
 
     <x-admin.index-toolbar>
         <x-slot:mainactions>
+            @can('role-create')
             <a class="btn btn-highlight waves-effect" data-modal="true" href="{{ route('roles.create') }}">
                 <i class="fa fa-plus-circle"></i>
                 <span class="d-none d-md-inline">{{ _('Create New Role') }}</span>
             </a>
+            @endcan
          </x-slot>
     </x-admin.index-toolbar>
 

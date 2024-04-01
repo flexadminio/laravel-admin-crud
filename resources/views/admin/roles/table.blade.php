@@ -26,6 +26,11 @@
                                 <x-admin.edit-button data-modal="true" href="{{ route('roles.edit', $role->id) }}" />
                             </li>
                         @endcan
+                        @can('role-delete')
+                            <li>
+                                <x-admin.delete-button data-url="{{ route('roles.destroy', $role->id) }}" data-confirm="Are you sure you want to delete this role?"/>
+                            </li>
+                        @endcan
                     </ul>
                 </td>
             </tr>

@@ -1,4 +1,5 @@
 <?php
+
 // https://spatie.be/docs/laravel-medialibrary/v10/installation-setup
 
 use Illuminate\Database\Migrations\Migration;

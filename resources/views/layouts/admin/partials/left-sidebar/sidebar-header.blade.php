@@ -5,4 +5,7 @@
         </a>
       </h3>
     </div>
+    <a class="sidebar-toggle-btn">
+    <i class="fa-solid fa-bars"></i>
+    </a>
 </div>

@@ -7,8 +7,9 @@
   a.active {
     &::before {
       display: flex;
-      font-family: 'Font Awesome 5 Pro';
+      font-family: 'Font Awesome 6 Free';
       content: "\f00c";
+      font-weight: 600;
       font-size: 1.2rem;
       position: absolute;
       width: 100%;
@@ -43,7 +44,7 @@
   &.active {
     &::before {
       display: flex;
-      font-family: 'Font Awesome 5 Pro';
+      font-family: 'Font Awesome 6 Free';
       content: "\f058";
       font-size: 3rem;
       position: absolute;

@@ -1,32 +1,28 @@
-## About FlexAdmin: Laravel 10, CRUD, Authentication, Admin Template
-https://www.flexadmin.io/documentation/introduction/
+## About FlexAdmin
 
+```diff
+! Please give me a star. I appreciate about that. Thank you so much!
+```
 
-## Free Download
+## Requirement:
+- PHP version >= 8.2
+- Nodejs version: >=20
+- MySql/MariaDB
 
-https://www.flexadmin.io/downloads/laravel-flexadmin-free/
+- Make sure .env file is existing in the project’s root directory
+- Make sure the Database environment variables are correct
 
+## Quick Installation (For MacOS or Linux)
 
-## Installation
+```
+sh install.sh
+```
+
+## Step by Step:
+
+Following this document
 
 https://www.flexadmin.io/documentation/installation/
-
-
-## Screenshots
-
-Dashboard | Add New Product  | Update record
---- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/dashboard.jpg" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/create-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/update-category.png" width="400">
-
-
-Product List | Multiple Upload  | Single Upload
---- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-screen1.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/upload-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/single-upload.png" width="400">
-
-
-Manage Role | Update Role  | Login
---- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/login.png" width="400">
 
 
 ## Run 
@@ -50,27 +46,33 @@ Laravel storage filesystem is so unique. Any file upload will be stored in the s
 
 ```
 php artisan storage:link
+
 ```
 
 This command will symlinked storage/app/public to public/storage
-
+Ensure APP_URL env variable is correct
 
 ## UI
-
-```
 npm run dev
-```
+
 
 ## Create new Adnin User
-
 ```
 php artisan admin:create
 ```
 
-## Create new Model
+## Code-style
+
+The project uses [laravel/pint](https://github.com/laravel/pint) to enforce code-style. To run it and fix any issues, use below command:
 
 ```
+./vendor/bin/pint
+```
+
+## Create new Model
+```
 php artisan make:model SomeModel -c
+
 ```
 
 ## Create admin module
@@ -94,3 +96,5 @@ php artisan flex:model YourModel
 php artisan flex:scaffold YourModel
 php artisan flex:rollback YourModel scaffold
 ```
+
+## License

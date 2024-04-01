@@ -25,12 +25,16 @@
                 <td>{{ $tag->name }}</td>
                 <td>
                     <ul class="list-unstyled table-actions">
+                        @can('tag-edit')
                         <li>
                           <x-admin.edit-button data-modal="true" href="{{ route('tags.edit', $tag->id) }}" />
                         </li>
+                        @endcan
+                        @can('tag-edit')
                         <li>
                           <x-admin.delete-button data-url="{{ route('tags.destroy', $tag->id) }}" />
                         </li>
+                        @endcan
                     </ul>
                 </td>
             </tr>

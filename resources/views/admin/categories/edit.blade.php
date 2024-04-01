@@ -3,13 +3,12 @@
         Update Category
     </x-slot>
     <x-form-errors />
-
-    {!! Form::model($resource, ['method' => 'PUT', 'route' => ['categories.update', $resource->id], 'data-remote' => "true"]) !!}
+    {{ html()->modelForm($resource, 'POST', route('categories.update', $resource->id))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @method('PUT')
 
         @include('admin/categories/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->closeModelForm() }}
 
 </x-admin.modal-layout>

@@ -1,0 +1,66 @@
+body[data-theme-mode="dark-mode"]{
+  .chatbox {
+    i {
+      color: var(--contrast-background);
+    }
+  }
+}
+
+.chatbox {
+  overflow: hidden;
+}
+
+.chatbox-friend-list {
+  width: 15.563rem;
+  right: -11.438rem;
+  transition-delay: .2s;
+  transition: all 450ms cubic-bezier(.34, 1.25, .3, 1);
+  background-color: var(--wash);
+
+  &:hover {
+    right: 0;
+
+    #chatbox-search-friend {
+      opacity: 1;
+    }
+  }
+}
+
+.chatbox-header {
+  border-bottom: 1px solid var(--divider);
+}
+
+.chatbox-body {
+  margin-right: calc(15.563rem - 11.438rem);
+  max-height: 600px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.chatbox-footer {
+  margin-right: calc(15.563rem - 11.438rem);
+  border-top: 1px solid var(--divider);
+  background-color: var(--wash);
+
+
+}
+
+.chatbox-message-input {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.chatbox-search-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#chatbox-search-friend {
+  opacity: 0;
+  margin-top: -2rem;
+  padding-left: 3rem;
+  transition-delay: .2s;
+  transition: all 470ms cubic-bezier(.34, 1.25, .3, 1);
+}

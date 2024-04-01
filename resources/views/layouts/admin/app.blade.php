@@ -6,13 +6,19 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="shortcut icon" href="{{ Vite::image('favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.ico') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="{{ asset('assets/js/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/js/vendor/select2/dist/css/select2.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/js/vendor/bootstrap-fileinput/css/fileinput.min.css') }}" rel="stylesheet">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="{{ asset('assets/js/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('assets/js/vendor/select2/dist/js/select2.min.js') }}"></script>
+        <script src="{{ asset('assets/js/vendor/bootstrap-fileinput/js/fileinput.min.js') }}"></script>
         @vite(['resources/sass/admin/app.scss', 'resources/js/admin/app.js'])
 
         <script>
@@ -43,7 +49,6 @@
               BEGIN left sidebar
           ***********************************-->
           @include('layouts.admin.partials.left-sidebar')
-          @include('layouts.admin.partials.quick-search-modal')
           <!--**********************************
               END left-sidebar
           ***********************************-->

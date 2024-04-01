@@ -3,10 +3,12 @@
 
     <x-admin.index-toolbar>
         <x-slot:mainactions>
+            @can('tag-create')
             <a class="btn btn-highlight waves-effect" data-modal="true" href="{{ route('tags.create') }}">
                 <i class="fa fa-plus-circle"></i>
                 <span class="d-none d-md-inline">{{ _('Create New Tag') }}</span>
             </a>
+            @endcan
          </x-slot>
     </x-admin.index-toolbar>
 
@@ -23,5 +25,5 @@
             </div>
         </div>
     </div>
-    {!! $collection->links() !!}
+    {!! $collection->links('pagination::bootstrap-5') !!}
 </x-admin.app-layout>

@@ -1,8 +1,5 @@
 // libraries
 import './bootstrap.js';
-import '~datepicker';
-import '~select2';
-import '~bootstrap-fileinput';
 import 'bootstrap-growl-ifightcrime';
 
 // core
@@ -10,6 +7,7 @@ import './global.js';
 import './bulk_checker.js';
 import AppCommon from './common.js';
 import LeftSidebar from './left_sidebar.js';
+import QuickSearch from './quick_search.js';
 import Topbar from './topbar.js';
 import Footer from './footer.js';
 import Fullscreen from './fullscreen.js';

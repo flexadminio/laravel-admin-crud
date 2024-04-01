@@ -4,7 +4,8 @@
     </x-slot>
     <x-form-errors />
 
-    {!! Form::model($user, ['method' => 'PATCH', 'route' => ['users.update', $user->id], 'data-remote' => 'true']) !!}
+    {{ html()->modelForm($user, 'PATCH', route('users.update', $user->id))->attributes(['data-remote' => 'true'])->open() }}
         @include('admin/users/fields')
-    {!! Form::close() !!}
+        @include('admin/share/form_actions')
+    {{ html()->closeModelForm() }}
 </x-admin.modal-layout>

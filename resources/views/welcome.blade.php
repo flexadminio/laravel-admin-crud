@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>FlexAdmin | The administration platform for business critical Laravel applications.</title>
+        <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.ico') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,17 +24,14 @@
                         <a href="{{ url('/admin/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-sky-400">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-sky-400">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-sky-400">Register</a>
-                        @endif
+                        
                     @endauth
                 </div>
             @endif
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
-                <img src="https://www.flexadmin.io/wp-content/uploads/2024/02/logo-flexadmin.svg" alt="FlexAdmin" class="w-auto h-16" />
+                <a href="/login"><img src="https://www.flexadmin.io/wp-content/uploads/2024/03/Flexadmin.svg" alt="FlexAdmin" class="w-auto h-16" /></a>
                 </div>
 
                 <div class="mt-16">
@@ -55,9 +53,9 @@
                             </div>
                         </a>
 
-                        <a href="https://github.com/flexadminio/laravel-crud" target="_blank" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-sky-400">
+                        <a href="https://www.youtube.com/@flexa-1tv" target="_blank" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-sky-400">
                             <div>
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Github</h2>
+                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Youtube</h2>
                             </div>
                         </a>
 

@@ -11,7 +11,7 @@ class AppCommon {
     this._select2WithIcon();
     this._applyCustomScroll();
     this._inputGroupHighlight();
-    this._applyBsDatePicker();
+    // this._applyBsDatePicker();
     this._removeCard();
   }
 
@@ -83,12 +83,13 @@ class AppCommon {
       leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
       rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
     }
-
-    $('.datepicker').datepicker({
-      todayHighlight: true,
-      orientation: "bottom left",
-      templates: controls
-    });
+    if ($('.datepicker').length > 0) {
+      $('.datepicker').datepicker({
+        todayHighlight: true,
+        orientation: "bottom left",
+        templates: controls
+      });
+    }
   }
 
   _removeCard() {
@@ -100,7 +101,9 @@ class AppCommon {
   }
 
   _applyDatePicker() {
-    $('.datepicker').datepicker();
+    if ($('.datepicker').length > 0) {
+      $('.datepicker').datepicker();
+    }
   }
 }
 

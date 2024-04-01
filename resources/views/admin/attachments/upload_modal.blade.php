@@ -12,7 +12,7 @@
                     <input type="file" name="images[]" id="flexadmin-bulk-upload-input" multiple
                         class="form-control-file">
                 </div>
-                <img src="{{ Vite::image('loader.gif') }}" alt="Loading" class="upload-loader d-none">
+                <img src="{{ Vite::asset('resources/images/loader.gif') }}" alt="Loading" class="upload-loader d-none">
             </div>
         </div>
     </div>

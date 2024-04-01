@@ -3,12 +3,11 @@
         Update Tag
     </x-slot>
     <x-form-errors />
-
-    {!! Form::model($resource, ['method' => 'PUT', 'route' => ['tags.update', $resource->id], 'data-remote' => "true"]) !!}
+    {{ html()->modelForm($resource, 'PUT', route('tags.update', $resource->id))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @method('PUT')
         @include('admin/tags/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->closeModelForm() }}
 
 </x-admin.modal-layout>

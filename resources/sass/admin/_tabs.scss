@@ -1,0 +1,74 @@
+
+.nav-bg {
+  background-color: var(--surface-background);
+}
+
+.tab-content {
+  background: transparent;
+  padding: 1.25rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .05);
+  border-radius: 0 0 .2rem .2rem;
+}
+
+.tab-content-bordered {
+  border: 1px solid $nav-tabs-border-color;
+  border-top: none;
+  border-radius: 0 0 .375rem .375rem;
+}
+
+.nav-pills,
+.nav-tabs {
+  .nav-item {
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link.active,
+  .show > .nav-link {
+    background-color: var(--highlight);
+  }
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border-color: #dee2e6 #dee2e6 var(--surface-background) #dee2e6;
+  background-color: var(--surface-background);
+  color: var(--main-text);
+}
+
+.nav-tabs-left {
+  display: flex;
+
+  .nav-tabs {
+    display: block;
+    border-bottom: none;
+    border-right: 1px solid $nav-tabs-border-color;
+  }
+
+  .nav-tabs .nav-item {
+    display: block;
+    margin-right: -1px;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    background-color: var(--surface-background);
+    border-color: #dee2e6 var(--surface-background) #dee2e6 #dee2e6;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .tab-content-bordered {
+    border-top: 1px solid $nav-tabs-border-color;
+    border-left: none;
+    border-radius: 0 0.375rem 0.375rem 0;
+  }
+}

@@ -1,0 +1,6 @@
+@each $color,
+$value in $theme-colors {
+  .bd-callout-#{$color} {
+    border-left-color: $value;
+  }
+}

@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-sm bg-primary float-end rounded">
-                                <i class="fa fa-usd"></i>
+                                <i class="fa-solid fa-shirt"></i>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-sm bg-success float-end rounded">
-                                <i class="fa fa-users"></i>
+                                <i class="fa-solid fa-users"></i>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-sm bg-info float-end rounded">
-                                <i class="fa fa-star"></i>
+                                <i class="fa-solid fa-layer-group"></i>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-sm bg-warning float-end rounded">
-                                <i class="fa fa-receipt"></i>
+                                <i class="fa-solid fa-tags"></i>
                             </div>
                         </div>
                     </div>

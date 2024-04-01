@@ -1,0 +1,38 @@
+.gallery-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: .625rem 0;
+  width: 12.5rem;
+}
+
+.gallery-menu>li>a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: .1875rem .625rem .1875rem 1.25rem;
+    font-size: .8125rem;
+}
+.gallery-menu>li.active>a {
+    background: #C8C7CC;
+}
+.gallery-menu>li.gallery-menu-header {
+    font-size: .6875rem;
+    padding: .9375rem .625rem .3125rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.gallery-content {
+  li {
+    float: left;
+    padding: 2px;
+    list-style: none;
+  }
+  .gallery-image {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+  }
+}

@@ -1,18 +1,17 @@
 <?php
 
 namespace App\Console\Commands;
+
 use App\Models\User;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 use Illuminate\Console\Command;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 /**
  * Command
  * php artisan admin:create
  * php artisan admin:create --username=your_user_name --email=your_email@domain.com
- * 
  */
-
 class CreateAdminUserCommand extends Command
 {
     /**
@@ -66,17 +65,17 @@ class CreateAdminUserCommand extends Command
         try {
             // Use fortify to create a new user.
             $user = User::create($input);
-          
+
             $role = Role::firstOrCreate(['name' => 'Admin']);
-           
-            $permissions = Permission::pluck('id','id')->all();
-         
+
+            $permissions = Permission::pluck('id', 'id')->all();
+
             $role->syncPermissions($permissions);
-            
+
             $user->assignRole([$role->id]);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             $this->error($e->getMessage());
+
             return;
         }
 
@@ -84,6 +83,6 @@ class CreateAdminUserCommand extends Command
         $this->info('');
         // Success message
         $this->info('User created successfully!');
-        $this->info('New user id: ' . $user->id);
+        $this->info('New user id: '.$user->id);
     }
 }

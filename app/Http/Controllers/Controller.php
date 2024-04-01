@@ -13,24 +13,25 @@ class Controller extends BaseController
 
     public function render_in_modal($template, $data = null): View
     {
-      return view($template, $data);
+        return view($template, $data);
     }
 
     public function ownerClass($ownerKey)
     {
-      $className = "App\\Models\\" . ucfirst($ownerKey);
-      $klass = new \ReflectionClass($className);
-      return $klass->name;
+        $className = 'App\\Models\\'.ucfirst($ownerKey);
+        $klass = new \ReflectionClass($className);
+
+        return $klass->name;
     }
 
     public function owner($ownerKey, $ownerId)
     {
-      if ($ownerId != null)
-      {
-        $ownerClass = $this->ownerClass($ownerKey);
-        return $ownerClass::find($ownerId);
-      } else {
-        return null;
-      }
+        if ($ownerId != null) {
+            $ownerClass = $this->ownerClass($ownerKey);
+
+            return $ownerClass::find($ownerId);
+        } else {
+            return null;
+        }
     }
 }

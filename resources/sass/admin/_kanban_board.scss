@@ -1,0 +1,149 @@
+.board {
+  display: block;
+  white-space: nowrap;
+  
+  .board-header-facepile {
+    .user-avatar:not(:first-child) {
+      margin-left: -5px;
+    }
+  }
+
+  .board-tasks {
+    overflow-x: auto;
+  }
+
+  .tasks {
+    display: inline-block;
+    width: 22rem;
+    padding: 0 0 1rem 0;
+    background: var(--wash);
+    vertical-align: top;
+    margin-bottom: 24px;
+    border-radius: .25rem;
+  }
+
+  .tasks.tasks:not(:last-child) {
+    margin-right: 1.25rem;
+  }
+
+  .tasks .task-header {
+    padding: 1rem 0;
+    margin-bottom: 0;
+  }
+
+  .task-list-items {
+    min-height: 100px;
+    position: relative;
+    padding: 0 1rem 1rem;
+  }
+
+  .task-list-items:before {
+    content: "No Tasks";
+    position: absolute;
+    line-height: 110px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .tasks .card {
+    white-space: normal;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 0 var(--nav-bar-highlight-background);
+  }
+
+  .task-item {
+    cursor: pointer;
+  }
+}
+
+.task-modal {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .card-detail-item-header {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    margin-top: 16px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 20px;
+    margin: 0 8px 4px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .card-detail-item-add-button {
+    font-size: 2.6rem;
+    color: #a4a5a9;
+  }
+
+  .card-label.mod-card-detail {
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0 4px 1px 0;
+    min-width: 40px;
+    padding: 0 12px;
+    width: auto;
+  }
+  .attachment-thumbnail {
+    border-radius: 3px;
+    min-height: 80px;
+    margin: 0 0 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .attachment-thumbnail-preview {
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    height: 80px;
+    margin-top: -40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+    width: 112px;
+  }
+  .attachment-thumbnail-details {
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 8px 8px 8px 128px;
+    min-height: 80px;
+    margin: 0;
+    z-index: 0;
+  }
+
+  .attachment-thumbnail-details-title-options span:not(:first-child):before {
+    content: " - ";
+  }
+
+  .action-comment {
+    background-color: var(--surface-background);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px -1px rgb(9 30 66 / 25%), 0 0 0 1px rgb(9 30 66 / 8%);
+    box-sizing: border-box;
+    clear: both;
+    margin: 4px 2px 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .task-comment-item {
+    margin-top: 0.8rem;
+  }
+}
+
+.ghost {
+  opacity: .3;
+}

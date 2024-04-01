@@ -1,0 +1,191 @@
+.email-list {
+    display: block;
+    padding-left: 0;
+    overflow: hidden;
+
+    > li {
+        position: relative;
+        display: block;
+        height: 51px;
+        line-height: 50px;
+        cursor: default;
+        transition-duration: 0.3s;
+
+        a {
+            color: var(--bs-gray-700);
+
+            &:hover {
+                color: var(--bs-gray-800);
+            }
+        }
+
+        .col-mail {
+            float: left;
+            position: relative;
+        }
+
+        .email-sender {
+            width: 320px;
+
+            .email-star,
+            .mail-checkbox-wrapper {
+                display: block;
+                float: left;
+            }
+
+            .mail-checkbox-wrapper {
+                margin: 15px 10px 0 20px;
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+            }
+
+            .email-star {
+                color: var(--bs-gray-500);
+                margin-left: 10px;
+                font-size: 18px;
+                margin-top: 14px;
+            }
+
+            .email-title {
+                position: absolute;
+                top: 0;
+                left: 100px;
+                right: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-bottom: 0;
+                line-height: 50px;
+            }
+        }
+
+        .email-content {
+            position: absolute;
+            top: 0;
+            left: 320px;
+            right: 0;
+            bottom: 0;
+            .email-subject,
+            .email-date {
+                position: absolute;
+                top: 0;
+            }
+            .email-subject {
+                left: 0;
+                right: 110px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .email-date {
+                right: 0;
+                width: 100px;
+                text-align: right;
+                padding-left: 10px;
+            }
+        }
+
+        &.active,
+        &.mail-selected {
+            background: var(--bs-gray-100);
+            transition-duration: 0.05s;
+        }
+
+        &.unread {
+            a {
+                font-weight: $font-weight-semibold;
+                color: var(--bs-dark);
+            }
+        }
+
+        .email-action-icons {
+            opacity: 0;
+
+            ul {
+                display: flex;
+                position: absolute;
+                transition: all 0.5s;
+                right: -180px;
+
+                li {
+                    margin: 0 10px;
+                }
+
+                a {
+                    font-size: 20px;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: var(--bs-gray-300);
+            transition-duration: 0.05s;
+
+            .email-action-icons {
+                opacity: 1;
+
+                ul {
+                    transition: all 0.5s;
+                    right: 10px;
+                }
+            }
+
+            .email-content {
+                .email-date {
+                    opacity: 0;
+                }
+
+                .email-subject {
+                    right: 180px;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.labels-list {
+    a {
+        padding: 7px 5px;
+    }
+}
+
+.write-mdg-box {
+    .CodeMirror {
+        height: 150px;
+    }
+}
+
+@media (max-width: 648px) {
+    .email-list {
+        li {
+            .email-sender {
+                .mail-checkbox-wrapper {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .email-list {
+        li {
+            .email-sender {
+                width: 150px;
+                .email-title {
+                    left: 80px;
+                }
+            }
+            .email-content {
+                display: none;
+            }
+        }
+    }
+}

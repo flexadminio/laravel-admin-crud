@@ -3,7 +3,7 @@
         <div class="row header justify-content-between mb-4">
             <div class="col-12">
                 <h1 class="header-title h3">
-                    <i class="fad fa-user text-highlight"></i>
+                    <i class="fa fa-user text-highlight"></i>
                     {{ __('Profile') }}
                 </h1>
             </div>
