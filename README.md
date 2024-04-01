@@ -40,11 +40,17 @@ https://www.flexadmin.io/documentation/installation/
 ## Run 
 
 ```
-docker-compose up
 php artisan migrate
 php artisan db:seed
 
 ```
+
+## Sets the APP_KEY value in your .env file
+
+```
+php artisan key:generate --ansi
+```
+
 
 ## Advance
 
