@@ -2,10 +2,9 @@
     <x-admin.page-header/>
     <x-form-alert :errors="$errors"/>
     <x-flash-message/>
-
-    {!! Form::model($product, ['method' => 'POST', 'route' => ['products.update', $product->id]]) !!}
+    {{ html()->modelForm($product, 'POST', route('products.update', $product->id))->open() }}
         @csrf
         @method('PUT')
         @include('admin/products/fields')
-    {!! Form::close() !!}
+    {{ html()->closeModelForm() }}
 </x-admin.app-layout>

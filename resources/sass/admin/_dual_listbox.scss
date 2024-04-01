@@ -1,0 +1,58 @@
+.dual-listbox {
+  .dual-listbox__button {
+    background: transparent;
+    border: 1px solid var(--highlight);
+    border-radius: 9px;
+    padding: 10px 25px;
+    color: var(--highlight);
+
+    &:hover {
+      background-color: var(--highlight);
+      color: $white;
+    }
+  }
+
+  .dual-listbox__item {
+
+    &:active,
+    &.dual-listbox__item--selected {
+      background-color: var(--highlight);
+      color: $white;
+    }
+  }
+
+  .dual-listbox__title {
+    border: none;
+  }
+}
+
+
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-cafe"],
+body[data-theme-mode="dark-mode"][data-theme-color="app-theme-charcoal"] {
+  .dual-listbox {
+    .dual-listbox__button {
+      background: transparent;
+      border: 1px solid var(--contrast-background);
+      border-radius: 9px;
+      padding: 10px 25px;
+      color: var(--contrast-background);
+
+      &:hover {
+        background-color: var(--contrast-background);
+        color: var(--highlight);
+      }
+    }
+
+    .dual-listbox__item {
+
+      &:active,
+      &.dual-listbox__item--selected {
+        background-color: var(--contrast-background);
+      }
+    }
+
+    .dual-listbox__title {
+      border: none;
+    }
+  }
+}

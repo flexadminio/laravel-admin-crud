@@ -38,7 +38,7 @@
                                                 <label class="custom-checkbox">
                                                     <input id="attachment-featured" type="checkbox"
                                                         name="custom_properties[featured]" value="true"
-                                                        {{ $attachment->getCustomProperty('featured', 'false') == 'true' ? 'checked="checked"' : '' }} />
+                                                        {{ $attachment->getCustomProperty('featured', 'false') == 'true' ? 'checked=checked' : '' }} />
                                                     Featured
                                                     <span></span>
                                                 </label>
@@ -85,7 +85,7 @@
                                     <!-- end row -->
                                     <div class="modal-footer">
                                         <button class="btn btn-highlight waves-effect" type="submit"><i
-                                                class="fa fa-save"></i> Save</button>
+                                                class="fa-regular fa-floppy-disk"></i> Save</button>
                                     </div>
                                 </div>
                                 <!-- end card-body -->

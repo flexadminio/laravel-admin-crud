@@ -3,10 +3,9 @@
         Create New Tag
     </x-slot>
     <x-form-errors />
-
-    {!! Form::open(['route' => 'tags.store', 'method' => 'POST', 'data-remote' => 'true']) !!}
+    {{ html()->form('POST', route('tags.store'))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @include('admin/tags/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->form()->close() }}
 </x-admin.modal-layout>

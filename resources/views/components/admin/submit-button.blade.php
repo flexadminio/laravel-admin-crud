@@ -1,1 +1,1 @@
-{{ Form::button('<i class="fa fa-save"></i> Save', ['type' => 'submit', 'class' => 'btn btn-highlight waves-effect']) }}
+{{  html()->button('<i class="fa-regular fa-floppy-disk"></i> Save', 'submit')->class('btn btn-highlight waves-effect') }}

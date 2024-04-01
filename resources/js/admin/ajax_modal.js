@@ -1,1 +1,155 @@
-import AjaxModalOpenCallback from"./ajax_modal_open_callback.js";class FlexAdminModal{init=()=>{this.ajaxSuccessCallback(),this.ajaxErrorCallback(),this.triggerModal(),this.modalClosedCallback()};ajaxSuccessCallback=()=>{var e=this;$(document).ajaxSuccess((function(a,o,n){e.isResponseScript(n)?e.stopAndDebug(a,o,n,null):e.isOpening()&&e.isResponseHtml(n)&&(a.preventDefault(),e.renderModalContent(o.responseText))}))};ajaxErrorCallback=()=>{var e=this;$(document).ajaxError((function(a,o,n,t){"canceled"!=t&&e.isOpening()&&!e.isResponseJson(n)&&(a.preventDefault(),n.iframe&&200==o.status&&"OK"==o.statusText&&o.responseText?e.renderModalContent(o.responseText):e.renderFormContent(o.responseText))}))};triggerModal=()=>{var e=this;$(document).on("click","a[data-modal]",(function(a){a.preventDefault();var o=$(this).attr("href");e.getContentByXhr(o)}))};modalClosedCallback=()=>{$(document).on("hidden.bs.modal",(function(){$("#flexadmin-modal").empty().remove()}))};bsModal=e=>{var a=$("#flexadmin-modal");return a.html(e),new window.bootstrap.Modal(a.find(".modal"),{backdrop:"static",keyboard:!1,focus:!1})};open=e=>{var a=$("<div/>",{id:"flexadmin-modal"});$(document.body).append(a),this.bsModal(e).show()};close=()=>{var e=$("#flexadmin-modal .modal");e.length>0&&window.bootstrap.Modal.getInstance(e).hide()};renderModalContent=e=>{var a=$(e).find(".modal-content").html();if(a){var o=$(e).find(".modal-dialog").attr("class");$("#flexadmin-modal .modal-dialog").addClass(o),$("#flexadmin-modal .modal-content").empty().html(a)}};renderFormContent=e=>{$(".modal-body-container").html(e),$.event.trigger({type:"shown.bs.modal"})};isResponseHtml=e=>e.dataTypes.indexOf("html")>=0;isResponseScript=e=>e.dataTypes.indexOf("script")>=0;isResponseJson=e=>e.dataTypes.indexOf("json")>=0;isOpening=()=>1==$("#flexadmin-modal > .modal").length;getContentByXhr=e=>{var a=this;function o(){$.ajax({global:!1,url:e,method:"GET",cache:!1,success:function(e){a.open(e),a.dissmissModalWithExternalLink(),(new AjaxModalOpenCallback).init()}})}a.isOpening()?(a.close(),setTimeout((function(){o()}),200)):o()};stopAndDebug=(e,a,o,n)=>{e.stopImmediatePropagation(),console.log("===> Server response javascript, all events has been stopped, see details below",e),console.log("XmlHttpRequest Object",a),console.log("XmlHttpRequest Settings",o),null==n?console.log("all good"):console.log("Exception",n)};dissmissModalWithExternalLink=()=>{var e=this;$('a[data-window="dismiss-modal-and-open-link"').on("click",(function(){e.close()}))}}export default FlexAdminModal;
+import AjaxModalOpenCallback from './ajax_modal_open_callback.js';
+
+class FlexAdminModal {
+  init = () => {
+    this.ajaxSuccessCallback();
+    this.ajaxErrorCallback();
+    this.triggerModal();
+    this.modalClosedCallback();
+  }
+
+  ajaxSuccessCallback = () => {
+    var self = this;
+    $( document ).ajaxSuccess(function( event, xhr, settings ) {
+      if (self.isResponseScript(settings)) { self.stopAndDebug(event, xhr, settings, null); return; }
+
+      if (self.isOpening() && self.isResponseHtml(settings)) {
+        event.preventDefault();
+        self.renderModalContent(xhr.responseText);
+      }
+    });
+  }
+
+  ajaxErrorCallback = () => {
+    var self = this;
+    $( document ).ajaxError(function( event, jqxhr, settings, thrownError ) {
+      if (thrownError == 'canceled' || !self.isOpening() || self.isResponseJson(settings)) { return; }
+      event.preventDefault();
+
+      // for remotipart
+      if (settings.iframe && jqxhr.status == 200 && jqxhr.statusText == 'OK' && jqxhr.responseText) {
+        self.renderModalContent(jqxhr.responseText);
+        return;
+      }
+
+      self.renderFormContent(jqxhr.responseText);
+    });
+  }
+
+  triggerModal = () => {
+    var self = this;
+    $(document).on('click', 'a[data-modal]', function (event) {
+      event.preventDefault();
+      var url = $(this).attr('href');
+      self.getContentByXhr(url);
+    });
+  }
+
+  modalClosedCallback = () => {
+    $(document).on('hidden.bs.modal', function () {
+      $('#flexadmin-modal').empty().remove();
+    });
+  }
+
+  bsModal = (data) => {
+    var modalWrapper = $('#flexadmin-modal');
+    modalWrapper.html(data)
+    return new window.bootstrap.Modal(modalWrapper.find('.modal'), {backdrop: 'static', keyboard: false, focus: false});
+  }
+
+  open = (data) => {
+    var modalWrapper = $('<div/>', {
+      id: 'flexadmin-modal'
+    });
+    $(document.body).append(modalWrapper);
+    this.bsModal(data).show();
+  }
+
+  close = () => {
+    var modalEl = $('#flexadmin-modal .modal');
+    
+    if (modalEl.length > 0) {
+      var modal = window.bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+    }
+  }
+
+  renderModalContent = (html) => {
+    var newModalContent = $(html).find('.modal-content').html();
+    if (newModalContent) {
+      var modalDialogClassName = $(html).find('.modal-dialog').attr('class');
+      $('#flexadmin-modal .modal-dialog').addClass(modalDialogClassName);
+      $('#flexadmin-modal .modal-content').empty().html(newModalContent);
+    }
+  }
+
+  renderFormContent = (html) => {
+    $('.modal-body-container').html(html);
+    $.event.trigger({
+      type: "shown.bs.modal"
+    });
+  }
+
+  isResponseHtml = (settings) => {
+    return settings.dataTypes.indexOf('html') >= 0;
+  }
+
+  isResponseScript = (settings) => {
+    return settings.dataTypes.indexOf('script') >= 0;
+  }
+
+  isResponseJson = (settings) => {
+    return settings.dataTypes.indexOf('json') >= 0;
+  }
+
+  isOpening = () => {
+    return $('#flexadmin-modal > .modal').length == 1;
+  }
+
+  getContentByXhr = (url) => {
+    var self = this;
+    if (self.isOpening()) {
+      self.close();
+      setTimeout(function() {
+        _get();
+      }, 200);
+    } else {
+      _get();
+    }
+    
+    function _get() {
+      $.ajax({
+        global: false,
+        url: url,
+        method: 'GET',
+        cache: false,
+        success: function(data) {
+          self.open(data);
+          self.dissmissModalWithExternalLink();
+          new AjaxModalOpenCallback().init();
+        }
+      });
+    }
+  }
+
+  stopAndDebug = (event, xhr, settings, exception) => {
+    event.stopImmediatePropagation();
+    console.log('===> Server response javascript, all events has been stopped, see details below', event);
+    console.log('XmlHttpRequest Object', xhr);
+    console.log('XmlHttpRequest Settings', settings);
+    if (exception == null) {
+      console.log('all good');
+    } else {
+      console.log('Exception', exception);
+    }
+  }
+
+  dissmissModalWithExternalLink = () => {
+    var self = this;
+    $('a[data-window="dismiss-modal-and-open-link"').on('click', function(){
+      self.close();
+    });
+  }
+}
+
+export default FlexAdminModal;

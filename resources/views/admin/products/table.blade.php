@@ -2,7 +2,14 @@
     <thead>
         <tr>
             <th>No</th>
+            <th class="no-sort">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="parent-checkbox">
+                    <span></span>
+                </label>
+            </th>
             <th>View</th>
+            <th class="no-sort">Image</th>
             <th>Name</th>
             <th>Category</th>
             <th>Tag</th>
@@ -17,8 +24,21 @@
         @foreach ($products as $product)
             <tr class="item">
                 <td>{{ ++$i }}</td>
+                <td>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="child-checkbox"
+                            data-id="{{ $product->id }}">
+                        <span></span>
+                    </label>
+                </td>
                 <td><a href="{{ route('products.show', $product->id) }}"><i class="fa fa-eye"
                             data-bs-original-title="View" data-bs-toggle="tooltip"></i></a></li>
+                </td>
+                <td>
+                    <a href="{{ route('products.edit', $product->id) }}">
+                        <img class="img-thumbnail" alt="Product"
+                            src="{{ feature_image_url($product) }}" width="48">
+                    </a>
                 </td>
                 <td><a
                         href="{{ route('products.edit', $product->id) }}">{{ $product->name }}</a>

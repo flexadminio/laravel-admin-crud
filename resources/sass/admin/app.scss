@@ -11,9 +11,6 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
-@import 'select2';
-@import '~bootstrap-fileinput/scss/fileinput.scss';
-@import "../vendors/bootstrap-datepicker/bootstrap-datepicker.css";
 
 // font-awesome
 @import "../fonts/fontawesome/scss/fontawesome";
@@ -39,7 +36,6 @@
 @import "avatar";
 @import "breadcrumb";
 @import "button";
-@import "calendar";
 @import "callout";
 @import "card";
 @import "chart";

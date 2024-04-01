@@ -3,9 +3,9 @@
         Edit Role
     </x-slot>
     <x-form-errors />
-
-    {!! Form::model($role, ['method' => 'PATCH', 'route' => ['roles.update', $role->id], 'data-remote' => "true"]) !!}
+    {{ html()->modelForm($role, 'PATCH', route('roles.update', $role->id))->attributes(['data-remote' => 'true'])->open() }}
         @include('admin.roles.fields')
-    {!! Form::close() !!}
+        @include('admin.share.form_actions')
+    {{ html()->closeModelForm() }}
 
 </x-admin.app-layout>

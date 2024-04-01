@@ -3,7 +3,7 @@
     <div class="input-group position-relative">
       <input type="text" class="form-control" placeholder="Search..." id="top-search">
       <button type="submit">
-      <i class="fa fa-search text-highlight"></i>
+      <i class="fal fa-search text-highlight"></i>
       </button>
     </div>
   </form>

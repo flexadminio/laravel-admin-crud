@@ -1,0 +1,56 @@
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e9ecef;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+// style for page icons
+
+#icon-list {
+  li {
+    display: inline-block;
+    width: 130px;
+    margin: 0 1rem 1rem 0;
+    > div {
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.shadow-hover {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateZ(0);
+}
+
+.shadow-hover::after {
+    content: '';
+    box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.shadow-hover:hover::after, .shadow-hover:focus::after {
+    opacity: 1;
+}
+
+.hover-bg-blue4:focus, .hover-bg-blue4:hover {
+    background-color: rgb(77, 171, 247);
+}
+
+.icon-name {
+  background: var(--thirtary-background)
+}
+
+.bd-example>.btn, .bd-example>.btn-group {
+  margin: .25rem .125rem;
+}

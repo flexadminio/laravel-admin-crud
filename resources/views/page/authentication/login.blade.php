@@ -19,11 +19,11 @@
                   </div>
                   <form action="#">
                       <div class="input-group mb-4">
-                          <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                          <span class="input-group-text" id="basic-addon1"><i class="fal fa-envelope"></i></span>
                           <input type="email" id="emailaddress" class="form-control" required="" placeholder="Email address" aria-label="Email" />
                       </div>
                       <div class="input-group mb-4">
-                          <span class="input-group-text" id="basic-addon2"><i class="fa fa-lock-alt"></i></span>
+                          <span class="input-group-text" id="basic-addon2"><i class="fal fa-lock-alt"></i></span>
                           <input class="form-control" type="password" required="" id="password" placeholder="Password" />
                       </div>
                       <div class="mb-3 justify-content-between d-flex">
@@ -34,7 +34,7 @@
                           <a href="pages-authentication-forgot-password.html" class="text-info ms-1">Forgot your password?</a>
                       </div>
                       <div class="d-grid mb-0 text-center">
-                          <button class="btn btn-warning d-block w-100 text-white" type="submit"><span>Sign In</span> <i class="fa fa-sign-in-alt"></i></button>
+                          <button class="btn btn-warning d-block w-100 text-white" type="submit"><span>Sign In</span> <i class="fal fa-sign-in-alt"></i></button>
                       </div>
                       <p class="text-center my-4">- OR -</p>
                       <div class="d-grid mx-auto">

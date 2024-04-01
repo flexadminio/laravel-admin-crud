@@ -3,11 +3,11 @@
         Create New Category
     </x-slot>
     <x-form-errors />
-
-    {!! Form::open(['route' => 'categories.store', 'method' => 'POST', 'data-remote' => 'true']) !!}
+    
+    {{ html()->form('POST', route('categories.store'))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @include('admin/categories/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->form()->close() }}
 
 </x-admin.modal-layout>

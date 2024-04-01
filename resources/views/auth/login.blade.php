@@ -1,5 +1,10 @@
 <x-guest-layout>
+    <div class="m-auto text-center">
+        <h3 class="text-dark-50 font-weight-bold mt-0 text-center">Sign In</h3>
+        <p class="text-muted mb-4">Enter your email address and password to access admin panel.</p>
+    </div>
     <!-- Session Status -->
+
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
@@ -7,40 +12,39 @@
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <div class="input-group mb-4">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')"
+                    placeholder="Email address" aria-label="Email" required autofocus autocomplete="username" />
+            </div>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
+        <div>
+            <div class="input-group mb-4">
+                <span class="input-group-text" id="basic-addon2"><i class="fa fa-lock"></i></span>
+                <x-text-input id="password" class="form-control" type="password" name="password" placeholder="Password"
+                    required autocomplete="current-password" />
+            </div>
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+        <div class="justify-content-between d-flex mb-3">
+            <label class="custom-checkbox">
+                <input type="checkbox" id="remember_me" name="remember"> Keep me logged in
+                <span></span>
             </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                <a class="text-info ms-1" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
+        </div>
 
-            <x-primary-button class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ms-3">
-                {{ __('Log in') }}
+        <div class="d-grid mb-0 text-center">
+            <x-primary-button class="btn btn-warning d-block w-100 text-white">
+                <span>{{ __('Sign in') }}</span>
+                <i class="fa fa-sign-in"></i>
             </x-primary-button>
         </div>
     </form>

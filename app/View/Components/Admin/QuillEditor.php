@@ -14,8 +14,7 @@ class QuillEditor extends Component
     public function __construct(
         public string $name,
         public $value = '',
-    )
-    {
+    ) {
         //
     }
 

@@ -4,8 +4,9 @@
     </x-slot>
     <x-form-errors />
 
-    {!! Form::open(['route' => 'users.store', 'method' => 'POST', 'data-remote' => 'true']) !!}
+    {{ html()->form('POST', route('users.store'))->attributes(['data-remote' => 'true'])->open() }}
         @include('admin/users/fields')
-    {!! Form::close() !!}
+        @include('admin/share/form_actions')
+    {{ html()->form()->close() }}
 
 </x-admin.modal-layout>

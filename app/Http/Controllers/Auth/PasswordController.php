@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class PasswordController extends Controller
 {
@@ -16,21 +15,15 @@ class PasswordController extends Controller
      */
     public function update(Request $request): RedirectResponse
     {
-        $request->validate([
-            'current_password' => ['required', 'string'],
-            'password' => ['required', 'string', 'confirmed']
+        $validated = $request->validateWithBag('updatePassword', [
+            'current_password' => ['required', 'current_password'],
+            'password' => ['required', Password::defaults(), 'confirmed'],
         ]);
 
-        $currentPasswordStatus = Hash::check($request->current_password, auth()->user()->password);
+        $request->user()->update([
+            'password' => Hash::make($validated['password']),
+        ]);
 
-        if ($currentPasswordStatus) {
-            User::findOrFail(Auth::user()->id)->update([
-                'password' => Hash::make($request->password),
-            ]);
-
-            return redirect()->back()->with('message', 'Password Updated Successfully');
-        } else {
-            return back()->withErrors(['Current Password does not match with Old Password!'])->withInput();
-        }
+        return back()->with('status', 'password-updated');
     }
 }

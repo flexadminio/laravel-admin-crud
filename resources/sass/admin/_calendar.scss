@@ -1,0 +1,51 @@
+@import '@fullcalendar/core/main';
+@import '@fullcalendar/daygrid/main';
+@import '@fullcalendar/timegrid/main';
+@import '@fullcalendar/list/main';
+
+.fc-button-primary {
+  background-color: var(--surface-background);
+  color: var(--contrast-background);
+  border-color: #dee2e6;
+}
+
+.fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: var(--wash);
+    border-color: #dee2e6;
+    color: var(--contrast-background);
+}
+
+.fc-button-primary:hover {
+  background-color: var(--wash);
+  border-color: #dee2e6;
+}
+
+.fc-button-primary:disabled:hover {
+    color: #fff;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+}
+
+.fc-toolbar h2, .fc-toolbar .h2 {
+  font-size: 1.5rem;
+}
+
+.fc-event {
+  border: none;
+  padding: 0.2rem;
+}
+
+.fc-unthemed td.fc-today {
+  background: var(--wash);
+}
+
+.fc-unthemed .fc-list-item:hover td {
+  background-color: var(--wash);
+}
+
+.fc-button-primary:focus, .fc-button-primary:not(:disabled):active:focus, .fc-button-primary:not(:disabled).fc-button-active:focus {
+  box-shadow: none;
+}
+.fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header, .fc-unthemed .fc-list-heading td {
+  background: transparent;
+}

@@ -25,12 +25,12 @@ return new class extends Migration
      */
     public function down(): void
     {
-      Schema::table('products', function($table) {
-        $table->dropColumn('status');
-        $table->dropColumn('price');
-        $table->dropColumn('quantity');
-        $table->dropColumn('charge_tax');
-        $table->dropColumn('unit_sold');
-    });
+        Schema::table('products', function ($table) {
+            $table->dropColumn('status');
+            $table->dropColumn('price');
+            $table->dropColumn('quantity');
+            $table->dropColumn('charge_tax');
+            $table->dropColumn('unit_sold');
+        });
     }
 };

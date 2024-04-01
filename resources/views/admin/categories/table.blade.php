@@ -9,6 +9,7 @@
                 </label>
             </th>
             <th>{{ _('ID') }}</th>
+            <th>{{ _('Image') }}</th>
             <th>{{ _('Name') }}</th>
             <th class="no-sort text-center">{{ _('Action') }}</th>
         </tr>
@@ -24,16 +25,24 @@
                     </label>
                 </td>
                 <td>{{ $category->id }}</td>
+                <td>
+                    <img class="img-thumbnail" alt="{{ $category->name }}" src="{{ resource_image_url($category) }}"
+                        width="48">
+                </td>
                 <td>{{ $category->name }}</td>
                 <td>
                     <ul class="list-unstyled table-actions">
+                        @can('category-edit')
                         <li>
                             <x-admin.edit-button data-modal="true"
                                 href="{{ route('categories.edit', $category->id) }}" />
                         </li>
+                        @endcan
+                        @can('category-delete')
                         <li>
                             <x-admin.delete-button data-url="{{ route('categories.destroy', $category->id) }}" />
                         </li>
+                        @endcan
                     </ul>
                 </td>
             </tr>
