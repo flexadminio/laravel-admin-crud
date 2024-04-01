@@ -1,6 +1,6 @@
 ## About FlexAdmin
 
-### Please give me a star. I appreciate about that. Thank you so much!
+### ![#E36F05] Please give me a star. I appreciate about that. Thank you so much!
 
 ## Requirement:
 - PHP version >= 8.2
