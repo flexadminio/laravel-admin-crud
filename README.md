@@ -114,14 +114,14 @@ php artisan flex:rollback YourModel scaffold
 
 Dashboard | Add New Product  | Update record
 --- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/dashboard.jpg" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/create-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/update-category.png" width="400">
+<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/dashboard.jpg" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/create-product.png" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/update-category.png" width="400">
 
 
 Product List | Multiple Upload  | Single Upload
 --- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-screen1.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/upload-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/single-upload.png" width="400">
+<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/fx-screen1.png" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/upload-product.png" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/single-upload.png" width="400">
 
 
 Manage Role | Update Role  | Login
 --- | --- |---
-<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/login.png" width="400">
+<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/fx-auth.png" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/auth.png" width="400">|<img src="https://github.com/flexadminio/laravel-admin-crud/blob/master/screenshots/login.png" width="400">
