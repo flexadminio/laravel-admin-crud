@@ -1,4 +1,5 @@
-## About FlexAdmin
+## About FlexAdmin: Laravel 10, CRUD, Authentication, Admin Template
+https://www.flexadmin.io/documentation/introduction/
 
 ```diff
 ! Please give me a star. I appreciate about that. Thank you so much!
@@ -11,6 +12,17 @@
 
 - Make sure .env file is existing in the project’s root directory
 - Make sure the Database environment variables are correct
+
+
+## Download
+
+https://www.flexadmin.io/laravel-flexadmin-free/
+
+
+## Installation
+
+https://www.flexadmin.io/documentation/installation/
+
 
 ## Quick Installation (For MacOS or Linux)
 
@@ -97,4 +109,19 @@ php artisan flex:scaffold YourModel
 php artisan flex:rollback YourModel scaffold
 ```
 
-## License
+
+## Screenshots
+
+Dashboard | Add New Product  | Update record
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/dashboard.jpg" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/create-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/update-category.png" width="400">
+
+
+Product List | Multiple Upload  | Single Upload
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-screen1.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/upload-product.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/single-upload.png" width="400">
+
+
+Manage Role | Update Role  | Login
+--- | --- |---
+<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/fx-auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/auth.png" width="400">|<img src="https://github.com/flexadminio/flexadmin-laravel-free/blob/master/screenshots/login.png" width="400">
