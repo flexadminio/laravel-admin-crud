@@ -1,4 +1,4 @@
-## About FlexAdmin: Laravel 10, CRUD, Authentication, Admin Template
+## About FlexAdmin: Laravel 11, CRUD, Authentication, Admin Template
 https://www.flexadmin.io/documentation/introduction/
 
 ```diff
